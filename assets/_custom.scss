@@ -83,3 +83,39 @@ html[data-theme="light"] #theme-toggle-dark,
 html:not([data-theme="dark"]) #theme-toggle-dark {
   display: block;
 }
+
+
+
+article a[href]:not(:where(
+
+    /* exclude hash only links */
+    [href^="#"],
+    /* exclude javascript only links */
+    [href^="javascript:" i],
+    /* exclude relative but not double slash only links */
+    [href^="/"]:not([href^="//"]),
+    /* TODO: enter domain */
+    [href*="//git-dok.com"],
+  ))::before {
+  content: "→\00a0";
+}
+
+article a {
+  color: var(--body-font-color) !important;
+  text-decoration: underline !important;
+  text-decoration-style: dotted !important;
+  text-decoration-color: var(--hint-color-info) !important;
+  text-decoration-skip: ink !important;
+  text-underline-offset: 0.25em !important;
+}
+
+article a:hover {
+  text-decoration: underline solid !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: var(--hint-color-info) !important;
+  text-decoration-skip: ink !important;
+
+  text-underline-offset: 0.25em !important;
+}
+
+@import "./remixicon";

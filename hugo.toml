@@ -6,14 +6,14 @@ theme = 'hugo-book'
 enableGitInfo = true
 
 [params]
-  bookTheme = 'light'
-  BookRepo = 'https://github.com/Simon-Martens/dok'
-  BookCommitPath = 'commit'
-  BookComments = false
-  BookDateFormat = "2.1.2006"
-  BookServiceWorker = true
+bookTheme = 'light'
+BookRepo = 'https://github.com/Simon-Martens/dok'
+BookCommitPath = 'commit'
+BookComments = false
+BookDateFormat = "2.1.2006"
+BookServiceWorker = true
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
