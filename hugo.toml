@@ -1,7 +1,14 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+languageCode = 'de-DE'
+title = 'Technik Basics'
 theme = 'hugo-book'
+
+enableGitInfo = true
+
+[params]
+  bookTheme = 'auto'
+  BookRepo = 'https://github.com/Simon-Martens/dok'
+  BookCommitPath = 'commit'
 
 [markup]
   [markup.goldmark]
