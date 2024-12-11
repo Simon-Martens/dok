@@ -1,0 +1,110 @@
+site_name: TSS/Technische Dokumentation
+site_description: Technische Dokumentation der Projektarbeit der Theodor Springmann Stiftung
+copyright: 2024 Simon Martens
+repo_url: https://github.com/Simon-Martens/dok
+site_dir: docs/
+docs_dir: src/
+
+extra_css:
+  - css/styles.css
+
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - js/tablesort.js
+
+theme:
+  name: material
+  custom_dir: src/overrides
+  language: de
+  font: 
+    text: Fira Sans Condensed
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-5
+        name: Dak Mode
+
+    # # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+         icon: material/brightness-3
+         name: Light Mode
+    # primary: custom
+  features:
+  #  - navigation.expand
+  #  - navigation.sections
+  #   - navigation.instant
+
+copyright: >
+  CC-0-Lizensiert 2024 Simon Martens
+
+extra:
+  generator: true
+
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:martens@tss-hd.de
+      text: e-Mail
+    - icon: fontawesome/regular/bookmark
+      link: https://theodor-springmann-stiftung.de
+      text: Theodor Springmann Stiftung
+
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     Die Seite lädt Javascript- und Schriftartendateien von google.com und cloudflare.com. Persönliche Daten über IP-Adresse und Datum des Besuchs, sowie benutzte Browser und Betriebssysteme können von diesen Anbietern durch die gesendeten Requests unter Umständen erhoben werden, jedoch nicht das genaue Verhalten auf und die Interaktion des einzelnen Nutzers mit der Seite.
+
+
+plugins:
+  # - with-pdf
+  - macros
+  - awesome-pages
+  - git-revision-date-localized:
+      locale: de
+  - search:
+      lang: de
+  # - encryptcontent:
+  #     global_password: 'your_password'
+  #     title_prefix: ''
+  #     summary: 'Der Inhalt dieser Seite ist verschlüsselt. '
+  #     placeholder: 'Mit Strg+Enter wird das Passwort global gesetzt'
+  #     password_button_text: 'Entschlüsseln'
+  #     decryption_failure_message: 'Falsches Passwort.'
+  #     encryption_info_message: 'Bitte wenden Sie sich an den Systemadministrator um auf diese Seite zuzugreifen.'
+  #     remember_password: True
+
+markdown_extensions:
+  - toc:
+      title: Auf dieser Seite
+  - pymdownx.smartsymbols
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - footnotes
+  - pymdownx.highlight:
+      pygments_lang_class: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - def_list
+  - abbr
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.snippets:
+      auto_append:
+        - src_docs_includes/glossary.md
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
