@@ -480,3 +480,4 @@ site/
 docs/
 .venv/
 venv/
+public/
