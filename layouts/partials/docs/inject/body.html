@@ -1,0 +1,49 @@
+<footer class="footer">
+	<div>
+		<div>
+			{{ .Site.Title }}: CC0 &ndash; No Rights Reserved; Hugo-Book Theme: MIT
+		</div>
+		<div>
+
+			{{ with .GitInfo }}
+			commit {{ .AbbreviatedHash }} / {{ .AuthorDate.Format "2.1.2006" }} / {{ .AuthorName }}
+			{{ end }}
+
+			<button type="button" id="theme-toggle" class="">
+				<svg id="theme-toggle-dark" class="" fill="currentColor" width="0.7rem" height="0.7rem"
+					viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="16" cy="16" r="15" />
+				</svg>
+				<svg id="theme-toggle-light" class="" fill="currentColor" width="0.7rem" height="0.7rem"
+					viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M16,1C24.279,1 31,7.721 31,16C31,24.279 24.279,31 16,31C7.721,31 1,24.279 1,16C1,7.721 7.721,1 16,1ZM16,5C9.929,5 5,9.929 5,16C5,22.071 9.929,27 16,27C22.071,27 27,22.071 27,16C27,9.929 22.071,5 16,5Z" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</footer>
+
+
+
+<script>
+
+	var toggle = document.getElementById("theme-toggle");
+
+	var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+	if (storedTheme)
+		document.documentElement.setAttribute('data-theme', storedTheme)
+
+
+	toggle.onclick = function () {
+		var currentTheme = document.documentElement.getAttribute("data-theme");
+		var targetTheme = "light";
+
+		if (currentTheme === "light") {
+			targetTheme = "dark";
+		}
+
+		document.documentElement.setAttribute('data-theme', targetTheme)
+		localStorage.setItem('theme', targetTheme);
+	};
+</script>
