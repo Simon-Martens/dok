@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+languageCode = 'de-DE'
+title = 'Technik Basics'
+theme = 'hugo-book'
+
+enableGitInfo = true
+
+[params]
+  bookTheme = 'auto'
+  BookRepo = 'https://github.com/Simon-Martens/dok'
+  BookCommitPath = 'commit'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
