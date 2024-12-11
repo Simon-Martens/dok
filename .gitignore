@@ -477,7 +477,6 @@ $RECYCLE.BIN/
 *.lnk
 MusenalmAPI/TEST.db
 site/
-docs/
 .venv/
 venv/
 public/
