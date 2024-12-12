@@ -10,7 +10,9 @@
     display: none !important;
   }
 
-  article p {
+  article p,
+  article blockquote,
+  article li {
     widows: 2 !important;
     orphans: 2 !important;
     break-inside: avoid !important;
@@ -61,7 +63,13 @@
     line-height: 1.35rem !important;
   }
 
-  article p {
+  article ul,
+  article ol {
+    break-before: avoid-page !important;
+  }
+
+  article p,
+  article li {
     max-width: 60ch !important
   }
 
