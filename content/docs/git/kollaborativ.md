@@ -19,9 +19,17 @@ Remote ist ein Verweis auf ein entferntes Repository, das auf einem Server liegt
 
 ### merge
 
-Falls mehere Teilnehmer:innen gleichzeitig an einem Projekt arbeiten, kann es passieren, dass *upstream* commits bereitstellt, die lokal nicht vorhanden sind. In diesem Fall muss ein merge durchgeführt werden, um die Änderungen zusammenzuführen. `git` versucht dann, den merge automatisch durchzuführen, und erstellt einen neuen commit, der die Änderungen vereint. In der Regel (>95% aller Fälle) ist das kein Problem, da die meisten Teilnehmer:innen an verschiedenen Teilen des Projekts (beispielsweise unterschiedliche Dateien, oder ganz andere Zeilen innerhalb einer Datei) arbeiten. `git` erkennt automatisch, welche Teile des Projekts von wem kommen und wie geändert werden müssen.
+Falls mehere Teilnehmer:innen gleichzeitig an einem Projekt arbeiten, kann es passieren, dass *upstream* commits bereitstellt, die lokal nicht vorhanden sind.
+In diesem Fall muss ein merge durchgeführt werden, um die Änderungen zusammenzuführen. 
+`git` versucht, den merge automatisch durchzuführen, und erstellt einen neuen commit, der die Änderungen vereint. 
+In der Regel (>95% aller Fälle) ist das kein Problem, da die meisten Teilnehmer:innen an verschiedenen Teilen des Projekts (beispielsweise unterschiedliche Dateien, oder ganz andere Zeilen innerhalb einer Datei) arbeiten. 
+`git` erkennt automatisch, welche Teile des Projekts von wem stammen und wie angepasst werden müssen, um einen konsistenten Dateistand herzustellen.
 
-Manchmal kann es aber auch zu Konflikten kommen, wenn zwei Teilnehmer:innen an der gleichen Datei und derselben Stelle Änderungen vorgenommen haben. In diesem Fall muss der merge manuell durchgeführt werden; dabei wird die Datei in einen Konfliktzustand versetzt, und die Konflikte müssen manuell gelöst werden. Der jeweils mergende entscheidet dabei, welche Änderungen übernommen werden sollten &ndash; und welche Geschichte sind.
+Manchmal kann es aber auch zu Konflikten kommen, die `git` nicht automatisch zusammenführen kann, oft, wenn Teilnehmer:innen an der gleichen Datei und derselben Stelle Änderungen vorgenommen haben. 
+In diesem Fall muss der merge manuell durchgeführt werden; dabei wird die Datei in einen Konfliktzustand versetzt, und die Konflikte müssen manuell gelöst werden. 
+Der jeweils mergende entscheidet dabei, welche Änderungen übernommen werden sollten &ndash; und welche Geschichte sind.
+
+Sind die Probleme gelöst, führt der mergende einen `git add` und einen `git commit` durch, um den merge abzuschließen, und schon ist die Ordung wieder hergestellt.
 
 
 {{< figure src="/images/GitWorkflowCollaborative.png" link="/images/GitWorkflowCollaborative.png" alt="Arbeitsablauf Git-Kollaborativ, Schematische Darstellung" >}}
