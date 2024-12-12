@@ -16,21 +16,21 @@ Ein Verzeichnis und die Geschichte aller Änderungen (Commits) und Verzweigungen
 
 Ein Speicherpunkt für einen spezifischen Dateistand. Ein Commit enthält verpflichtend:
 
-- Einen SHA1-Hash, der den Commit eindeutig identifiziert.
-- Angaben zum Autor des Commits (Name, email-Adresse und Zeitstempel des Commits mit Zeitzone).
-- Eine Nachricht, die optimalerweise den Commit kurz beschreibt.
-- Eine Referenz auf den vorherigen Commit (Parent-Commit). Ausnahme: Der erste Commit in einem Repository und sog. *dangling Commits* haben keinen Parent-Commit. Außerdem kann ein Commit mehrere Parent-Commits haben, wenn es sich um einen Merge-Commit handelt.
-- Eine Referenz auf einen spezifischen Stand eine Dateibaums.
+- Einen *SHA1-Hash*, der den commit eindeutig identifiziert.
+- Angaben zum Autor des commits (*Name, email-Adresse und Zeitstempel mit Zeitzone*).
+- Eine Nachricht, die optimalerweise den commit kurz beschreibt.
+- Eine Referenz auf den vorherigen commit (*parent-commit*). Ausnahme: Der erste commit in einem Repository und sog. *dangling commits* haben keinen Parent-commit. Außerdem kann ein commit mehrere parent-commits haben, wenn es sich um einen merge-commit handelt, der mehrere Verzweigungen zusammenführt.
+- Eine Referenz auf einen spezifischen Stand eines Verzeichnisbaumes.
 
-Optional kann ein Commit auch enthalten:
+Optional kann ein commit auch enthalten:
 
-- Comitter und Autor eines Commits können differenziert werden, auch mit unterschiedlichen Zeitstempeln. Bei sehr großen Projekten kann es vorkommen, dass Commits eingereicht werden und nur Maintainer oder Integratoren die Commits in das Repository einpflegen.
-- Eine Referenz auf einen Tag, der den Commit markiert, i.d.R. sind das Markierungen von funktional abgeschlossenen Zuständen eines Repositories (z.B. 2.16, 0.1-alpha).
-- Eine längere Beschreibung des Commits, genannt Notiz.
+- Comitter und Autor eines commits können differenziert werden, auch mit unterschiedlichen Zeitstempeln. Bei sehr großen Projekten kann es vorkommen, dass commits eingereicht werden und nur Maintainer oder Integratoren commits letztendlich in das Repository einpflegen.
+- Eine Referenz auf einen *tag*, der den commit markiert, i.d.R. sind das Markierungen von funktional abgeschlossenen Zuständen eines Repositories (z.B. 2.16, 0.1-alpha).
+- Eine längere Beschreibung des commits, genannt Notiz od. *note*.
 
 ### Stage
 
-Oft wird ster Stageing-Bereich auch *Index* genannt. Der Stageing-Bereich ist eine Hilfe für Entwickler:innen um Änderungen an Dateien zu sammelen, die dann zusammen in den nächsten Commit einfließen.
+Oft wird ster Stageing-Bereich auch *Index* genannt. Der Stageing-Bereich ist eine Hilfe für Entwickler:innen um Änderungen an Dateien zu sammelen, die dann zusammen in den nächsten commit einfließen.
 
 {{< figure src="/images/GitWorkflowStandalone.png" link="/images/GitWorkflowStandalone.png" alt="Arbeitsablauf Git-Lokal, Schematische Darstellung" >}}
 

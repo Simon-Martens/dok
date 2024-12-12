@@ -46,3 +46,18 @@ Das Handbuch zum Befehl `git` und allen Sub-Commands kann im Terminal oder [onli
 Die Einführug in Git orientiert sich an `giteveryday` und `gitessentials` ([online](https://git-scm.com/docs/giteveryday)). 
 Auf der offiziellen Website gibt es auch das Buch [Pro Git 2](https://git-scm.com/book/en/v2) zur kostenlosen Lektüre, dass
 eine umfassende Einführung in die Funktionsweise von Git bietet, und auch kapitelweise gelesen werden kann.
+
+## Einrichtung
+
+Vor der ersten Verwendung von Git müssen einige Konfigurationen vorgenommen werden. Diese sind global und betreffen alle Repositories auf dem Rechner, können aber auch je Repository überschrieben werden.
+
+```bash
+git config --global user.name "Max Mustermann"
+git config --global user.email "maxmustermann@provider.de"
+```
+
+Setzt den Namen und die E-Mail-Adresse des Benutzers. Diese Informationen werden in den Commits gespeichert und sind für die Zusammenarbeit mit anderen Benutzern wichtig. 
+
+{{% hint info %}}
+Benutzt man Hosting-Services wie GitHub oder GitLab, dann ist es hilfreich, die E-Mail-Adresse zu verwenden, die auch dort hinterlegt ist. So werden die commits dem richtigen Benutzer zugeordnet.
+{{% /hint %}}
