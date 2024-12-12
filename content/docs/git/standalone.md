@@ -4,7 +4,7 @@ Title: "Git Lokal"
 bookToc: false
 ---
 
-{{< figure src="/images/GitStandalone.png" link="/images/GitStandalone.png" alt="Arbeitsablauf Git-Lokal, Schematische Darstellung" >}}
+{{< figure src="/images/GitStandalone.png" link="/images/GitStandalone.png" alt="Arbeitsablauf Git-Lokal, Schematische Darstellung" class="invertable" >}}
 
 ## Begriffe
 
@@ -32,7 +32,7 @@ Optional kann ein commit auch enthalten:
 
 Oft wird ster Stageing-Bereich auch *Index* genannt. Der Stageing-Bereich ist eine Hilfe für Entwickler:innen um Änderungen an Dateien zu sammelen, die dann zusammen in den nächsten commit einfließen.
 
-{{< figure src="/images/GitWorkflowStandalone.png" link="/images/GitWorkflowStandalone.png" alt="Arbeitsablauf Git-Lokal, Schematische Darstellung" >}}
+{{< figure src="/images/GitWorkflowStandalone.png" link="/images/GitWorkflowStandalone.png" alt="Arbeitsablauf Git-Lokal, Schematische Darstellung" class="invertable" >}}
 
 ## Befehle
 

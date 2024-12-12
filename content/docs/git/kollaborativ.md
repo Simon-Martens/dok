@@ -4,7 +4,7 @@ Title: "Git Kollaborativ"
 bookToc: false
 ---
 
-{{< figure src="/images/GitCollaborative.png" link="/images/GitCollaborative.png" alt="Arbeitsablauf Git-Kollaborativ, Schematische Darstellung" >}}
+{{< figure src="/images/GitCollaborative.png" link="/images/GitCollaborative.png" alt="Arbeitsablauf Git-Kollaborativ, Schematische Darstellung" class="invertable" >}}
 
 Eigentlich arbeitet `git` dezentral, das heißt, dass prinzipell jeder Client gleichberechtigt wird, und keine:r der Teilnehmer:innen eines Projekts Autorität über den gerade gültigen Stand des Repositories besitzt. In der Praxis wird jedoch immer ein zentrales Repository (*upstream*) als Referenz genutzt. Dieser Server hostet den quasi gültigen Status der history eines Projekts, die nie gewaltsam überschrieben werden sollte (mehr dazu unten). 
 
@@ -32,7 +32,7 @@ Der jeweils mergende entscheidet dabei, welche Änderungen übernommen werden so
 Sind die Probleme gelöst, führt der mergende einen `git add` und einen `git commit` durch, um den merge abzuschließen, und schon ist die Ordung wieder hergestellt.
 
 
-{{< figure src="/images/GitWorkflowCollaborative.png" link="/images/GitWorkflowCollaborative.png" alt="Arbeitsablauf Git-Kollaborativ, Schematische Darstellung" >}}
+{{< figure src="/images/GitWorkflowCollaborative.png" link="/images/GitWorkflowCollaborative.png" alt="Arbeitsablauf Git-Kollaborativ, Schematische Darstellung" class="invertable" >}}
 
 ## Befehle
 

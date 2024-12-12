@@ -126,6 +126,10 @@ html:not([data-theme="dark"]) #theme-toggle-dark {
   display: block;
 }
 
+html[data-theme="dark"] figure.invertable img {
+  filter: invert(1);
+}
+
 article a[href]:not(:where(
 
     /* exclude hash only links */
