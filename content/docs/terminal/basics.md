@@ -5,9 +5,9 @@ Title: "Terminal Basics"
 
 # Terminal Basics
 
-## Unterschiede in Windows, Mac und Linux
+## Unterschiede zwischen Windows, Mac und Linux
 
-Das Terminal oder auch die *Shell* ist ein sehr mächtiges textbasiertes Werkzug und für viele Entwickler das Mittel der Wahl, um mit dem Computer zu interagieren. Dabei gibt es jedoch Unterschiede in der Verwendung und den verfügabren Befehlen in verschiedenen Betriebssystemen.
+Das Terminal oder auch die *Shell* ist ein sehr mächtiges textbasiertes Werkzug und für viele Entwickler das Mittel der Wahl, um mit dem Computer zu interagieren. Dabei gibt es jedoch Unterschiede in der Verwendung und Verfügbarkeit von Befehlen in verschiedenen Betriebssystemen.
 
 {{% columns %}}
 

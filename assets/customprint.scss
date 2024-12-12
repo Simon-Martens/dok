@@ -1,0 +1,85 @@
+@media print {
+  footer {
+    display: none !important;
+
+  }
+
+  header,
+  .book-header,
+  header.book-header {
+    display: none !important;
+  }
+
+  article p {
+    widows: 2 !important;
+    orphans: 2 !important;
+    break-inside: avoid !important;
+  }
+
+  aside {
+    display: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid-page !important;
+  }
+
+  h1+p,
+  h2+p,
+  h3+p,
+  h4+p,
+  h5+p,
+  h6+p {
+    break-before: avoid-page !important;
+  }
+
+  h1+div,
+  h2+div,
+  h3+div,
+  h4+div,
+  h5+div,
+  h6+div {
+    break-before: avoid-page !important;
+  }
+
+  article details summary {
+    display: none !important;
+  }
+
+  article details[open] {
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  article {
+    line-height: 1.35rem !important;
+  }
+
+  article p {
+    max-width: 60ch !important
+  }
+
+  article .tipp {
+    border: none !important;
+    break-inside: avoid !important;
+  }
+
+  article .tipp .tipp-head {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  article .tipp .tipp-head * {
+    margin: unset !important;
+  }
+
+  article .tipp .tipp-body {
+    padding: 0 !important;
+  }
+}

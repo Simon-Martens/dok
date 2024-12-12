@@ -26,6 +26,8 @@
 
 
 
+
+
 <script>
 
 	var toggle = document.getElementById("theme-toggle");
@@ -46,4 +48,28 @@
 		document.documentElement.setAttribute('data-theme', targetTheme)
 		localStorage.setItem('theme', targetTheme);
 	};
+</script>
+
+
+
+<script>
+let print = window.matchMedia("print");
+let old = document.documentElement.getAttribute('data-theme');
+
+print.addListener(function (print) {	
+	if (print.matches) {
+		document.documentElement.setAttribute('data-theme', 'light');
+		let details = document.querySelectorAll("details");
+		details.forEach(function (detail) {
+			detail.setAttribute("open", "open");
+		});
+	} else {
+		document.documentElement.setAttribute('data-theme', old);
+		let details = document.querySelectorAll("details");
+		details.forEach(function (detail) {
+			detail.removeAttribute("open");
+		});
+	}
+});
+
 </script>
