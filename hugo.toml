@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://dok.tss-admin.de/'
 languageCode = 'de-DE'
 defaultContentLanguage = 'de'
 title = 'Technik Basics'
