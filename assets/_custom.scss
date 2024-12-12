@@ -126,8 +126,14 @@ article p a:hover {
   text-underline-offset: 0.2em !important;
 }
 
-article p {
+article p,
+article li {
   hyphens: auto;
+  max-width: 80ch;
+}
+
+article figure a::before {
+  content: "" !important;
 }
 
 @import "./remixicon";

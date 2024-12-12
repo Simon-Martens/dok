@@ -1,6 +1,6 @@
 ---
 weight: 3
-Title: "Git Verteilt"
+Title: "Git Kollaborativ"
 ---
 
 # Begriffe
