@@ -148,7 +148,7 @@ article p a {
   color: var(--body-font-color) !important;
   text-decoration: underline !important;
   text-decoration-style: dotted !important;
-  text-decoration-color: var(--hint-color-info) !important;
+  text-decoration-color: var(--color-link) !important;
   text-decoration-skip: ink !important;
   text-underline-offset: 0.25em !important;
 }
@@ -156,7 +156,7 @@ article p a {
 article p a:hover {
   text-decoration: underline solid !important;
   text-decoration-style: solid !important;
-  text-decoration-color: var(--hint-color-info) !important;
+  text-decoration-color: var(--hint-color-link) !important;
   text-decoration-skip: ink !important;
   text-underline-offset: 0.2em !important;
 }

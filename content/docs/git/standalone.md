@@ -22,6 +22,8 @@ Ein Speicherpunkt für einen spezifischen Dateistand. Ein Commit enthält verpfl
 - Eine Referenz auf den vorherigen commit (*parent-commit*). Ausnahme: Der erste commit in einem Repository und sog. *dangling commits* haben keinen Parent-commit. Außerdem kann ein commit mehrere parent-commits haben, wenn es sich um einen merge-commit handelt, der mehrere Verzweigungen zusammenführt.
 - Eine Referenz auf einen spezifischen Stand eines Verzeichnisbaumes.
 
+Da die meisten dieser Felder von `git` generiert werden oder global konfiguriert sind, muss meist nur eine kurze commit message angegeben werden.
+
 Optional kann ein commit auch enthalten:
 
 - Comitter und Autor eines commits können differenziert werden, auch mit unterschiedlichen Zeitstempeln. Bei sehr großen Projekten kann es vorkommen, dass commits eingereicht werden und nur Maintainer oder Integratoren commits letztendlich in das Repository einpflegen.
@@ -30,11 +32,13 @@ Optional kann ein commit auch enthalten:
 
 ### Stage
 
-Oft wird ster Stageing-Bereich auch *Index* genannt. Der Stageing-Bereich ist eine Hilfe für Entwickler:innen um Änderungen an Dateien zu sammelen, die dann zusammen in den nächsten commit einfließen.
+Oft wird der Stageing-Bereich auch *Index* genannt. Der Stageing-Bereich ist eine Hilfe für Entwickler:innen um Änderungen an Dateien zu sammeln, die dann zusammen in den nächsten commit einfließen.
 
 {{< figure src="/images/GitWorkflowStandalone.png" link="/images/GitWorkflowStandalone.png" alt="Arbeitsablauf Git-Lokal, Schematische Darstellung" class="invertable" >}}
 
 ## Befehle
+
+[init](#git-init) | [status](#git-status) | [log](#git-log) | [add](#git-add) | [commit](#git-commit)
 
 {{% columns %}}
 
