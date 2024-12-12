@@ -8,6 +8,7 @@
   --color-visited-link: #8440f1;
 
   --body-background: #f0f0f0;
+  --alternate-background: #e0e0e0;
   --body-font-color: black;
 
   --icon-filter: none;
@@ -24,11 +25,12 @@ body {
 }
 
 .footer {
-  background-color: var(--gray-100);
+  background-color: var(--alternate-background);
   position: fixed;
   bottom: 0;
   width: 100%;
   color: var(--body-font-color);
+  font-size: 0.8rem;
 }
 
 
@@ -45,6 +47,12 @@ body {
   color: var(--color-link);
   cursor: pointer;
   outline: none;
+  position: relative;
+  top: 2px;
+}
+
+.book-tabs label {
+  outline: none;
 }
 
 
@@ -57,6 +65,7 @@ html[data-theme="dark"] {
   --color-visited-link: #b88dff;
 
   --body-background: #242a30;
+  --alternate-background: #1c1f23;
   --body-font-color: #e9ecef;
 
   --icon-filter: brightness(0) invert(1);
@@ -100,7 +109,7 @@ article a[href]:not(:where(
   content: "→\00a0";
 }
 
-article a {
+article p a {
   color: var(--body-font-color) !important;
   text-decoration: underline !important;
   text-decoration-style: dotted !important;
@@ -109,13 +118,16 @@ article a {
   text-underline-offset: 0.25em !important;
 }
 
-article a:hover {
+article p a:hover {
   text-decoration: underline solid !important;
   text-decoration-style: solid !important;
   text-decoration-color: var(--hint-color-info) !important;
   text-decoration-skip: ink !important;
+  text-underline-offset: 0.2em !important;
+}
 
-  text-underline-offset: 0.25em !important;
+article p {
+  hyphens: auto;
 }
 
 @import "./remixicon";

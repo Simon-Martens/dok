@@ -1,5 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'de-DE'
+defaultContentLanguage = 'de'
 title = 'Technik Basics'
 theme = 'hugo-book'
 
@@ -10,7 +11,7 @@ bookTheme = 'light'
 BookRepo = 'https://github.com/Simon-Martens/dok'
 BookCommitPath = 'commit'
 BookComments = false
-BookDateFormat = "2.1.2006"
+BookDateFormat = "2. January 2006"
 BookServiceWorker = true
 
 [markup]
