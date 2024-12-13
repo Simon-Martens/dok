@@ -30,28 +30,6 @@ Manchmal kann es aber bei widersprüchlichen Änderungen zu Konflikten kommen, d
 
 {{% columns %}}
 
-
-### git pull
-
-```bash
-git pull <pfad>
-```
-
-{{% hint warning %}}
-Es ist sinnvoll, vor jeder Arbeit einen pull durchzuführen, um unnötige Konflikte zu vermeiden. 
-{{% /hint %}}
-
-`git pull` lädt alle Änderungen aus dem entfernten Repository herunter und führt einen merge, falls nötig, durch. 
-
-{{% hint info %}}
-Bei einem pull kann es zu merge-Konflikten kommen. Grundsätzlich muss ein merge durchgeführt werden, wenn auf dem Server commits von anderen Teilnehmer:innen vorliegen, die lokal nicht verfügbar sind, also wenn:
-
-- vor dem Arbeiten nicht gepullt wurde.
-- während des Arbeiten andere Teilnehmer:innen ihre commits gepusht haben.
-
-Schafft `git` es nicht, Änderungen automatisch zusammenzuführen, müssen die Konflikte manuell gelöst werden. In beiden Fällen erstellt `git` einen merge commit, der die Änderungen zusammenführt.
-{{% /hint %}}
-
 ### git clone
 
 ```bash
@@ -59,6 +37,21 @@ git clone <url>
 ```
 
 `git clone` erstellt initial eine Kopie eines entfernten Repositories auf dem lokalen Rechner. Der Standardname für das entfernte Repository ist `origin`. Der erstellte Ordner trägt den Namen des Repositories. Jede:r Teilnehmer:in erhält eine eigene Kopie des Repositories, mit allen jemals daran getätigten Änderungen. Die lokale Version funktioniert unabhängig und offline von der öffentlichen.
+
+
+### git pull
+
+```bash
+git pull <pfad>
+```
+
+`git pull` lädt alle Änderungen aus dem entfernten Repository herunter und führt die Änderungen, falls nötig, zusammen.
+
+{{% hint warning %}}
+Bei einem `pull` kann es zu einem [Merge-Konflikt](/docs/git/kollaborativ/merge) kommen.
+
+Es ist sinnvoll, vor jeder Arbeit einen pull durchzuführen, um unnötige Konflikte zu vermeiden. 
+{{% /hint %}}
 
 <--->
 
