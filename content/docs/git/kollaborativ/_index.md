@@ -122,7 +122,7 @@ git checkout <pfad | tree-like>
 
 Wenn Änderungen in den Dateien zurückgesetzt werden sollen, die noch nicht in einem commit sind, kann `git checkout` benutzt werden. So werden alle Dateien eines Verzeichnisses beispielsweise mit `git checkout .` in den Zustand des letzten commits zurückgesetzt. Dieser Befehl wird oft benutzt, wenn man kurzfristig etwas kaputt gemacht hat, aber jetzt nicht das Repo neu clonen möchte. 
 
-**Achtung!** Dabei gehen alle Änderungen verloren, die nicht committed wurden.
+**Achtung!** Dabei gehen Änderungen an Dateien verloren, die nicht committed wurden.
 
 
 {{% /hint %}}
@@ -135,6 +135,8 @@ git reset [--soft | --hard] <commit-like>
 `reset` kann die History neu schreiben. Früher wurde `reset` u.a. dazu benutzt, Änderungen aus dem Index zu entfernen und von `git status` dazu empfohlen. Heute wird `git restore` empfohlen, um Änderungen aus dem Stageing-Bereich zu nehmen. `reset` sollte nur in Ausnahmefällen und nach Absprache mit allen Beteiligten durchgeführt werden.
 
 {{% /hint %}}
+
+### Git Rebase
 
 {{% hint warning %}}
 ```bash
