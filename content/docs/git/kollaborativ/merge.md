@@ -11,7 +11,7 @@ Der Merge-Workflow ist der von `git` standardmäßig vorgeschlagene und eingeste
 Alternativ zum Merge-Workflow kann man auch den [Rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) verwenden. 
 Ein ganz anderer und im Kontext von Open Source oft genutzter Arbeitsablauf ([Patch-Workflow](https://git-scm.com/docs/gitworkflows")) sieht vor, Änderungen nur durch Integratoren (via *pull-requests* oder per mail eingesendete *patches*) einpflegen zu lassen.
 
-Bei einem Merge-Workflow können bei einem `git pull` mehrere Dinnge passieren:
+Bei einem Merge-Workflow können bei einem `git pull` mehrere Dinge passieren:
 
 ## 1. Lokal keine commits | Remote keine commits
 
