@@ -10,17 +10,17 @@ bookToc: false
 
 ### Repository
 
-Ein Verzeichnis und die Geschichte aller Änderungen (Commits) und Verzweigungen (branches) an getrackten Ordnern und Dateien.
+Ein Verzeichnis und die Geschichte aller Änderungen (commits) und Verzweigungen (branches) von getrackten Ordnern und Dateien.
 
 ### Commit
 
 Ein Speicherpunkt für einen spezifischen Dateistand. Ein Commit enthält verpflichtend:
 
 - Einen *SHA1-Hash*, der den commit eindeutig identifiziert.
-- Angaben zum Autor des commits (*Name, email-Adresse und Zeitstempel mit Zeitzone*).
-- Eine Nachricht, die optimalerweise den commit kurz beschreibt.
-- Eine Referenz auf den vorherigen commit (*parent-commit*). Ausnahme: Der erste commit in einem Repository und sog. *dangling commits* haben keinen Parent-commit. Außerdem kann ein commit mehrere parent-commits haben, wenn es sich um einen merge-commit handelt, der mehrere Verzweigungen zusammenführt.
+- Angaben zum Autor des commits *(Name, email-Adresse und Zeitstempel mit Zeitzone)*.
+- Eine Referenz auf den vorherigen commit *(parent-commit)*. Ausnahme: Der erste commit in einem Repository und sog. *dangling commits* haben keinen Parent-commit. Außerdem kann ein commit mehrere parent-commits haben, wenn es sich um einen merge-commit handelt, der Verzweigungen zusammenführt.
 - Eine Referenz auf einen spezifischen Stand eines Verzeichnisbaumes.
+- Eine Nachricht, die optimalerweise den commit kurz beschreibt.
 
 Da die meisten dieser Felder von `git` generiert werden oder global konfiguriert sind, muss meist nur eine kurze commit message angegeben werden.
 
