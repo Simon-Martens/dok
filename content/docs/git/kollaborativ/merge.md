@@ -13,23 +13,23 @@ Ein ganz anderer und im Kontext von Open Source oft genutzter Arbeitsablauf ([Pa
 
 Bei einem Merge-Workflow können bei einem `git pull` mehrere Dinnge passieren:
 
-## 1. Lokal keine commits / Remote keine commits
+## 1. Lokal keine commits | Remote keine commits
 
 Hier zeigt `git` eine Meldung, dass alles aktuell ist und es passiert gar nichts.
 
-## 2. Lokal keine commits / Remote neue commits
+## 2. Lokal keine commits <i class="ri-arrow-left-line"></i> Remote neue commits
 
 Hier findet ein *fast-forward* statt. 
 Das bedeutet, dass die neuen commits einfach auf den aktuellen Stand aufgesetzt werden. 
-Das ist möglich, weil die neuen commits auf dem aktuellen Stand basieren. Das ist der einfachste und häufigste Fall, wenn man vor dem Arbeiten schnell einen `git pull` durchführt. Es gibt keinen neuen Merge-Commit.
+Das ist möglich, weil die neuen commits auf dem aktuellen Stand basieren. Das ist der einfachste und häufigste Fall, wenn man vor dem Arbeiten schnell einen `git pull` durchführt. Es gibt keinen Merge-Commit.
 
-## 3. Lokal neue commits / Remote keine commits
+## 3. Lokal neue commits <i class="ri-arrow-right-line"></i> Remote keine commits
 
 Hier kann man einfach `git push` ausführen. 
 Dabei passiert ein *fast-forward* auf dem Remote-Repository. Es gibt keinen neuen Merge-Commit. 
 Oder man arbeitet lokal weiter und pusht später.
 
-## 4. Lokal neue commits / Remote neue commits
+## 4. Lokal neue commits <i class="ri-expand-horizontal-s-line"></i> Remote neue commits
 
 Hier muss ein Merge-Commit erstellt werden. 
 Dabei passiert ein sog. *three-way-merge*. 
