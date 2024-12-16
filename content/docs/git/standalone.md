@@ -112,6 +112,10 @@ Erstellt einen neuen Commit mit den Dateien, die sich im Stageing-Bereich befind
 Es ist empfehlenswert, eine kurze, aussagekräftige Commit-Nachricht zu schreiben ("Einpflegung Brief 343", "Kollation Ms. 12.4") und allgemeine Nachrichten ("kleine Änderung", "Nochmal") so gut es geht zu vermeiden.
 {{% /hint %}}
 
+{{% hint info %}}
+Zum Festlegen eines Editors siehe [hier](/docs/git/basics/#einrichtung).
+{{% /hint %}}
+
 {{% hint danger %}}
 Der Befehl `git commit --amend` kann genutzt werden, um den letzten commit zu ändern, so bespielsweise einen Rechtschreibfehler in einer commit-Message. Das sollte jedoch nur gemacht werden, wenn der commit noch nicht gepusht wurde. Ansonsten wird die History des Repositories verändert, was zu Problemen bei kollaborierenden Entwickler:innen führt.
 {{% /hint %}}

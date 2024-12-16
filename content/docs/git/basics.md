@@ -21,6 +21,8 @@ Man muss die Funktionsweise von Git nicht vollständig verstehen, um es effektiv
 ## Installation und Hilfe
 
 Git kann über die [offizielle Website](https://git-scm.com/) heruntergeladen werden.
+Bei der Installation kann man in der Regel die Standard-Optionen übernehmen.
+Es empfiehlt sich aber, einen Texteditor wie Notepad++ oder Visual Studio Code zu installieren, und beider Installation von git als Editor auszuwählen, um die Commit-Nachrichten zu schreiben.
 
 {{% tabs %}}
 
@@ -61,3 +63,18 @@ Setzt den Namen und die E-Mail-Adresse des Benutzers. Diese Informationen werden
 {{% hint info %}}
 Benutzt man Hosting-Services wie GitHub oder GitLab, dann ist es hilfreich, die E-Mail-Adresse zu verwenden, die auch dort hinterlegt ist. So werden die commits dem richtigen Benutzer zugeordnet.
 {{% /hint %}}
+
+```bash
+git config --global core.editor "\"c:\Program Files\Notepad++\notepad++.exe\""
+```
+oder
+```bash
+git config --global core.editor notepad
+```
+oder
+```bash
+git config --global core.editor "code --wait"
+```
+
+Setzt den Texteditor für Commit-Nachrichten auf notepad++, notepad oder VS Code. 
+Der Editor wird geöffnet, wenn man von `git` dazu aufgefordert wird, eine Commit-Nachricht zu schreiben.

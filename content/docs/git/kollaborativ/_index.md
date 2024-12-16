@@ -8,7 +8,9 @@ bookToc: false
 
 Im Grunde funktioniert `git` dezentral, das heißt, dass prinzipell jeder Client gleichberechtigt ist, und keine:r der Teilnehmer:innen eines Projekts Autorität über den gerade gültigen Stand eines Repositories besitzt. In der Praxis wird jedoch immer ein zentrales Repository als Referenz genutzt. Ein Server hostet den de facto gültigen Status eines Projekts, der zwar gewaltsam überschrieben werden kann, aber nie sollte (mehr dazu unten). 
 
+{{% hint info %}}
 Weil Server, im Gegensatz zu einzelnen Rechnern, immer eingeschaltet sind und im offenen Netz stehen, benutzt man in der Regel einen Anbieter, der das autoritative Repository hostet. Die bekanntesten Anbieter sind [GitHub](https://github.com), [GitLab](https://gitlab.com) und [Bitbucket](https://bitbucket.org). Software wie [Gitea](https://gitea.io) oder [Gogs](https://gogs.io) ermöglichen es auch, eigene Git-Server zu betreiben, was aber wegen des hohen Aufwands und der geringen Vorteile nur von sehr großen oder firmeninternen Projekten gemacht wird.
+{{% /hint %}}
 
 ## Begriffe
 
@@ -16,6 +18,13 @@ Weil Server, im Gegensatz zu einzelnen Rechnern, immer eingeschaltet sind und im
 
 Remote ist ein Verweis auf ein entferntes Repository, das auf einem Server liegt. Der Standardname für das entfernte Repository ist `origin`. Mit `git remote` können alle entfernten Repositories angezeigt werden, mit `git remote -v` werden auch die URLs angezeigt. Mit `git remote add <name> <url>` kann ein neues entferntes Repository hinzugefügt werden, mit dem synchronisiert werden kann.
 
+### history
+
+Die history ist essentiell eine commit-Kette, angefangen vom letzten &ndash; neuesten &ndash; commit bis zum ersten, der keine Eltern hat. 
+Die history, einmal geschrieben, ist zwar nicht unveränderbar, aber eine Veränderung der history ist mit hohem Aufwand und einem Bruch der Zusammenarbeit verbunden.
+Commits selbst können nicht geändert, nur neu geschrieben werden; wird also ein commit in der Kette geändert, so müssen alle folgenden commits ebenfalls neu geschrieben werden.
+
+Es gibt [geeignetere Methoden, zu einem früheren Stand zurückzukehren](#wie-können-änderungen-rückgängig-gemacht-machen).
 
 ### merge
 
@@ -66,9 +75,8 @@ git push
 `git push` kann auch mit `--tags` kombiniert werden, um Tags zu veröffentlichen.
 
 {{% hint info %}}
-commits, die einmal veröffentlicht wurden, können nur sehr schwer und verbunden mit der Unterbrechung aller Arbeiten am Repository geändert werden. Es gibt fast keine Fälle, in denen es ratsam ist, commits zu löschen oder zu ändern, nachdem sie veröffentlicht wurden. 
+Der Server lehnt einen `push` ab, wenn remote neue commits vorliegen. In einem solchen Fall sollte ein `git pull` durchgeführt werden, um die Änderungen zu integrieren.
 {{% /hint %}}
-
 
 {{% hint danger %}}
 Manchmal wird  in Foren ein `git push --force` zur Lösung eines Problems angeraten. Der Server wird damit angewiesen, seine history mit der lokalen zu überschreiben. 
